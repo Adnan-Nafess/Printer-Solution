@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   ShieldCheck,
   MapPin,
@@ -6,17 +6,38 @@ import {
 } from "lucide-react";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const scrollToGuides = () => {
+    if (location.pathname === "/") {
+      // Already on Home
+      document.getElementById("guides")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    } else {
+      // Go to Home first
+      navigate("/#guides");
+
+      // Wait for Home to render, then scroll
+      setTimeout(() => {
+        document.getElementById("guides")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 100);
+    }
+  };
+
   return (
     <footer className="border-t border-slate-200 bg-slate-50 text-slate-600">
       <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
 
-        {/* =========================
-            TOP FOOTER
-        ========================== */}
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
 
           {/* =========================
-              ABOUT
+              ABOUT / DESCRIPTION
           ========================== */}
           <div>
             <p className="max-w-md text-[15px] leading-7 text-slate-600">
@@ -26,7 +47,6 @@ const Footer = () => {
               toner, and useful printer guides.
             </p>
 
-            {/* Small Information Box */}
             <div className="mt-6 flex max-w-md items-center gap-3 rounded-xl border border-blue-100 bg-white px-4 py-3 shadow-sm">
               <ShieldCheck
                 size={18}
@@ -48,29 +68,67 @@ const Footer = () => {
             </h3>
 
             <ul className="mt-5 space-y-3 text-[15px]">
-              <li className="text-slate-600 transition-colors hover:text-blue-600">
-                Printer Setup & Installation
+
+              <li>
+                <button
+                  type="button"
+                  onClick={scrollToGuides}
+                  className="text-left text-slate-600 transition-colors hover:text-blue-600"
+                >
+                  Printer Setup & Installation
+                </button>
               </li>
 
-              <li className="text-slate-600 transition-colors hover:text-blue-600">
-                Wireless Printer Connections
+              <li>
+                <button
+                  type="button"
+                  onClick={scrollToGuides}
+                  className="text-left text-slate-600 transition-colors hover:text-blue-600"
+                >
+                  Wireless Printer Connections
+                </button>
               </li>
 
-              <li className="text-slate-600 transition-colors hover:text-blue-600">
-                Printing & Print Jobs
+              <li>
+                <button
+                  type="button"
+                  onClick={scrollToGuides}
+                  className="text-left text-slate-600 transition-colors hover:text-blue-600"
+                >
+                  Printing & Print Jobs
+                </button>
               </li>
 
-              <li className="text-slate-600 transition-colors hover:text-blue-600">
-                Paper & Feeding Problems
+              <li>
+                <button
+                  type="button"
+                  onClick={scrollToGuides}
+                  className="text-left text-slate-600 transition-colors hover:text-blue-600"
+                >
+                  Paper & Feeding Problems
+                </button>
               </li>
 
-              <li className="text-slate-600 transition-colors hover:text-blue-600">
-                Ink, Toner & Print Quality
+              <li>
+                <button
+                  type="button"
+                  onClick={scrollToGuides}
+                  className="text-left text-slate-600 transition-colors hover:text-blue-600"
+                >
+                  Ink, Toner & Print Quality
+                </button>
               </li>
 
-              <li className="text-slate-600 transition-colors hover:text-blue-600">
-                Printer Warnings & Errors
+              <li>
+                <button
+                  type="button"
+                  onClick={scrollToGuides}
+                  className="text-left text-slate-600 transition-colors hover:text-blue-600"
+                >
+                  Printer Warnings & Errors
+                </button>
               </li>
+
             </ul>
           </div>
 
@@ -83,6 +141,7 @@ const Footer = () => {
             </h3>
 
             <ul className="mt-5 space-y-3 text-[15px]">
+
               <li>
                 <Link
                   to="/"
@@ -121,12 +180,22 @@ const Footer = () => {
 
               <li>
                 <Link
+                  to="/refund-policy"
+                  className="text-slate-600 transition-colors hover:text-blue-600"
+                >
+                  Refund Policy
+                </Link>
+              </li>
+
+              <li>
+                <Link
                   to="/terms-and-conditions"
                   className="text-slate-600 transition-colors hover:text-blue-600"
                 >
                   Terms & Conditions
                 </Link>
               </li>
+
             </ul>
           </div>
 
@@ -138,7 +207,6 @@ const Footer = () => {
               Contact Information
             </h3>
 
-            {/* Address */}
             <div className="mt-5 flex gap-3">
               <MapPin
                 size={18}
@@ -156,7 +224,6 @@ const Footer = () => {
               </p>
             </div>
 
-            {/* Email */}
             <div className="mt-5 flex gap-3">
               <Mail
                 size={18}
@@ -173,16 +240,15 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* =========================
-            DIVIDER
-        ========================== */}
+        {/* DIVIDER */}
         <div className="my-12 h-px bg-slate-200" />
 
         {/* =========================
-            DISCLAIMER
+            INDEPENDENT RESOURCE
         ========================== */}
         <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
           <div className="flex items-start gap-3">
+
             <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-blue-600" />
 
             <div>
@@ -208,7 +274,7 @@ const Footer = () => {
         </div>
 
         {/* =========================
-            BOTTOM FOOTER
+            COPYRIGHT
         ========================== */}
         <div className="mt-8 flex flex-col gap-5 text-sm md:flex-row md:items-center md:justify-between">
 
@@ -217,6 +283,7 @@ const Footer = () => {
           </p>
 
           <div className="flex flex-wrap gap-6">
+
             <Link
               to="/privacy-policy"
               className="text-slate-500 transition-colors hover:text-blue-600"
@@ -225,11 +292,19 @@ const Footer = () => {
             </Link>
 
             <Link
+              to="/refund-policy"
+              className="text-slate-500 transition-colors hover:text-blue-600"
+            >
+              Refund Policy
+            </Link>
+
+            <Link
               to="/terms-and-conditions"
               className="text-slate-500 transition-colors hover:text-blue-600"
             >
               Terms of Use
             </Link>
+
           </div>
         </div>
 

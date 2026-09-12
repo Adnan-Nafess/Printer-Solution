@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
+import RefundPolicy from "./pages/RefundPolicy";
 
 const pageTitles = {
   "/": "Home",
@@ -16,16 +17,15 @@ const pageTitles = {
   "/contact": "Contact Us",
   "/privacy-policy": "Privacy Policy",
   "/terms-and-conditions": "Terms & Conditions",
+  "/refund-policy": "Refund Policy",
 };
 
 function AppContent() {
   const location = useLocation();
 
   useEffect(() => {
-    // Change browser tab title
     document.title = pageTitles[location.pathname] || "Home";
 
-    // Always start new page from top
     window.scrollTo({
       top: 0,
       left: 0,
@@ -43,10 +43,8 @@ function AppContent() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route
-            path="/terms-and-conditions"
-            element={<Terms />}
-          />
+          <Route path="/terms-and-conditions" element={<Terms />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
         </Routes>
       </main>
 

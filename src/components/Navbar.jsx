@@ -7,6 +7,7 @@ const navItems = [
   { name: "About Us", path: "/about" },
   { name: "Contact Us", path: "/contact" },
   { name: "Privacy Policy", path: "/privacy-policy" },
+  { name: "Refund Policy", path: "/refund-policy" },
   { name: "Terms & Conditions", path: "/terms-and-conditions" },
 ];
 
@@ -64,7 +65,7 @@ const Navbar = () => {
         ========================== */}
         {isMenuOpen && (
           <div className="border-t border-slate-100 pb-3 md:hidden">
-            
+
             {/* Menu Heading */}
             <div className="px-2 pb-2 pt-3">
               <p className="text-center text-[9px] font-medium uppercase tracking-wider text-slate-400">
