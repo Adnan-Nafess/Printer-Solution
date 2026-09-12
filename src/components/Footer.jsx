@@ -1,58 +1,119 @@
 import { Link } from "react-router-dom";
+import {
+  ShieldCheck,
+  MapPin,
+  Mail,
+} from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-gray-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-14">
+    <footer className="border-t border-slate-200 bg-slate-50 text-slate-600">
+      <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
 
-        <div className="grid gap-10 md:grid-cols-4">
+        {/* =========================
+            TOP FOOTER
+        ========================== */}
+        <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
 
-          {/* Brand */}
-          <div className="md:col-span-2">
-            <p className="mt-4 max-w-md leading-7 text-gray-600">
-              Simple and useful information to help you understand common
-              printer problems and find helpful solutions.
+          {/* =========================
+              ABOUT
+          ========================== */}
+          <div>
+            <p className="max-w-md text-[15px] leading-7 text-slate-600">
+              An educational resource featuring easy-to-understand
+              information about everyday printer use, common printing
+              problems, setup, connections, paper handling, ink and
+              toner, and useful printer guides.
             </p>
+
+            {/* Small Information Box */}
+            <div className="mt-6 flex max-w-md items-center gap-3 rounded-xl border border-blue-100 bg-white px-4 py-3 shadow-sm">
+              <ShieldCheck
+                size={18}
+                className="shrink-0 text-blue-600"
+              />
+
+              <span className="text-sm text-slate-500">
+                Free Educational Information • Easy-to-Follow Guides
+              </span>
+            </div>
           </div>
 
-          {/* Quick Links */}
+          {/* =========================
+              EDUCATIONAL TOPICS
+          ========================== */}
           <div>
-            <h3 className="font-semibold text-gray-900">
-              Quick Links
+            <h3 className="text-sm font-bold uppercase tracking-wide text-slate-900">
+              Educational Topics
             </h3>
 
-            <ul className="mt-4 space-y-3 text-sm text-gray-600">
+            <ul className="mt-5 space-y-3 text-[15px]">
+              <li className="text-slate-600 transition-colors hover:text-blue-600">
+                Printer Setup & Installation
+              </li>
+
+              <li className="text-slate-600 transition-colors hover:text-blue-600">
+                Wireless Printer Connections
+              </li>
+
+              <li className="text-slate-600 transition-colors hover:text-blue-600">
+                Printing & Print Jobs
+              </li>
+
+              <li className="text-slate-600 transition-colors hover:text-blue-600">
+                Paper & Feeding Problems
+              </li>
+
+              <li className="text-slate-600 transition-colors hover:text-blue-600">
+                Ink, Toner & Print Quality
+              </li>
+
+              <li className="text-slate-600 transition-colors hover:text-blue-600">
+                Printer Warnings & Errors
+              </li>
+            </ul>
+          </div>
+
+          {/* =========================
+              WEBSITE LINKS
+          ========================== */}
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-wide text-slate-900">
+              Website Links
+            </h3>
+
+            <ul className="mt-5 space-y-3 text-[15px]">
               <li>
-                <Link to="/" className="hover:text-blue-600">
+                <Link
+                  to="/"
+                  className="text-slate-600 transition-colors hover:text-blue-600"
+                >
                   Home
                 </Link>
               </li>
 
               <li>
-                <Link to="/about" className="hover:text-blue-600">
-                  About
+                <Link
+                  to="/about"
+                  className="text-slate-600 transition-colors hover:text-blue-600"
+                >
+                  About Us
                 </Link>
               </li>
 
               <li>
-                <Link to="/contact" className="hover:text-blue-600">
-                  Contact
+                <Link
+                  to="/contact"
+                  className="text-slate-600 transition-colors hover:text-blue-600"
+                >
+                  Contact Us
                 </Link>
               </li>
-            </ul>
-          </div>
 
-          {/* Legal */}
-          <div>
-            <h3 className="font-semibold text-gray-900">
-              Legal
-            </h3>
-
-            <ul className="mt-4 space-y-3 text-sm text-gray-600">
               <li>
                 <Link
                   to="/privacy-policy"
-                  className="hover:text-blue-600"
+                  className="text-slate-600 transition-colors hover:text-blue-600"
                 >
                   Privacy Policy
                 </Link>
@@ -61,7 +122,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/terms-and-conditions"
-                  className="hover:text-blue-600"
+                  className="text-slate-600 transition-colors hover:text-blue-600"
                 >
                   Terms & Conditions
                 </Link>
@@ -69,17 +130,107 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* =========================
+              CONTACT INFORMATION
+          ========================== */}
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-wide text-slate-900">
+              Contact Information
+            </h3>
+
+            {/* Address */}
+            <div className="mt-5 flex gap-3">
+              <MapPin
+                size={18}
+                className="mt-1 shrink-0 text-slate-500"
+              />
+
+              <p className="text-[14px] leading-6 text-slate-600">
+                D-2/59, Eros Apartment,
+                <br />
+                Block G, Nehru Place,
+                <br />
+                New Delhi, Delhi 110019,
+                <br />
+                India
+              </p>
+            </div>
+
+            {/* Email */}
+            <div className="mt-5 flex gap-3">
+              <Mail
+                size={18}
+                className="mt-1 shrink-0 text-slate-500"
+              />
+
+              <a
+                href="mailto:admin@12printer.online"
+                className="break-all text-[14px] leading-6 text-slate-600 transition-colors hover:text-blue-600"
+              >
+                admin@12printer.online
+              </a>
+            </div>
+          </div>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-12 flex flex-col gap-4 border-t border-gray-100 pt-6 text-sm text-gray-500 md:flex-row md:items-center md:justify-between">
-          <p>
-            © {new Date().getFullYear()} . All rights reserved.
+        {/* =========================
+            DIVIDER
+        ========================== */}
+        <div className="my-12 h-px bg-slate-200" />
+
+        {/* =========================
+            DISCLAIMER
+        ========================== */}
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
+          <div className="flex items-start gap-3">
+            <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-blue-600" />
+
+            <div>
+              <h3 className="text-sm font-semibold text-slate-900">
+                Independent Educational Resource
+              </h3>
+
+              <p className="mt-2 text-[13px] leading-6 text-slate-500">
+                This website provides general educational and
+                informational content about printers and everyday
+                printing topics. The website is independently operated
+                and is not affiliated with, sponsored by, or officially
+                associated with any printer manufacturer or brand.
+                Brand names and product references, where mentioned,
+                are used only for identification and educational
+                reference purposes. Information may not apply to every
+                printer model or individual situation, so readers should
+                refer to the documentation provided for their specific
+                device when appropriate.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* =========================
+            BOTTOM FOOTER
+        ========================== */}
+        <div className="mt-8 flex flex-col gap-5 text-sm md:flex-row md:items-center md:justify-between">
+
+          <p className="text-slate-500">
+            © {new Date().getFullYear()} 12printer.online. All rights reserved.
           </p>
 
-          <p>
-            Printer Learning Guides
-          </p>
+          <div className="flex flex-wrap gap-6">
+            <Link
+              to="/privacy-policy"
+              className="text-slate-500 transition-colors hover:text-blue-600"
+            >
+              Privacy
+            </Link>
+
+            <Link
+              to="/terms-and-conditions"
+              className="text-slate-500 transition-colors hover:text-blue-600"
+            >
+              Terms of Use
+            </Link>
+          </div>
         </div>
 
       </div>

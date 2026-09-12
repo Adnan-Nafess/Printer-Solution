@@ -109,32 +109,32 @@ const Hero = () => {
             SIMPLE IMAGE
         ========================== */}
         <motion.div
-          initial={{
-            opacity: 0,
-            x: 35,
-            scale: 0.95,
-          }}
-          animate={{
-            opacity: 1,
-            x: 0,
-            scale: 1,
-          }}
-          transition={{
-            duration: 0.8,
-            delay: 0.15,
-          }}
-          className="relative"
-        >
-          <div className="mx-auto max-w-lg overflow-hidden rounded-[2rem] border border-white bg-white p-3 shadow-2xl shadow-slate-300/40">
-            <div className="overflow-hidden rounded-[1.5rem] bg-slate-100">
-              <img
-                src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=1000&q=85"
-                alt="Modern printer"
-                className="h-[420px] w-full object-cover transition duration-700 hover:scale-105"
-              />
-            </div>
-          </div>
-        </motion.div>
+  initial={{
+    opacity: 0,
+    x: 35,
+    scale: 0.95,
+  }}
+  animate={{
+    opacity: 1,
+    x: 0,
+    scale: 1,
+  }}
+  transition={{
+    duration: 0.8,
+    delay: 0.15,
+  }}
+  className="relative"
+>
+  <div className="mx-auto max-w-lg overflow-hidden rounded-[2rem] border border-white bg-white p-3 shadow-2xl shadow-slate-300/40">
+    <div className="overflow-hidden rounded-[1.5rem] bg-slate-100">
+      <img
+        src="https://miro.medium.com/1*9_V_7lAKI7HGEyzDlgjs_g.jpeg"
+        alt="Modern printer"
+        className="h-[420px] w-full object-cover transition duration-700 hover:scale-105"
+      />
+    </div>
+  </div>
+</motion.div>
 
       </div>
     </section>

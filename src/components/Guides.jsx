@@ -20,7 +20,7 @@ const guides = [
     description:
       "A printer can appear ready but still fail to print a document. The problem may be related to a stuck print queue, incorrect printer selection, offline status, connection problems or the printer itself needing attention.",
     image:
-      "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=900&q=85",
+      "https://media.istockphoto.com/id/826385060/photo/compact-printer-isolated.jpg?s=612x612&w=0&k=20&c=SKq9HjuZAOZs1dLlHnPMoXnqp-bwQfoI4zuaZ0OzqCM=",
     steps: [
       "Make sure the printer is switched on and does not show an error or warning.",
       "Check that the correct printer is selected when sending the document.",
@@ -106,22 +106,22 @@ const guides = [
   },
 
   {
-  icon: TriangleAlert,
-  category: "Warnings",
-  title: "Printer Warning or Error",
-  description:
-    "A printer warning usually means that something needs attention before printing can continue. The message may relate to paper, ink or toner, an open cover, a connection issue, or another printer condition.",
-  image:
-    "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=900&q=85",
-  steps: [
-    "Read the complete warning or error message shown on the printer display or computer.",
-    "Check whether the message refers to paper, ink, toner, a cover, or the printer connection.",
-    "Make sure all printer covers and access doors are properly closed.",
-    "Check the paper tray and cartridge or toner area if the warning points to supplies.",
-    "Restart the printer if the message appears temporary and the printer allows a restart.",
-    "If a specific error code remains, check the information for your printer model to understand what it means.",
-  ],
-},
+    icon: TriangleAlert,
+    category: "Warnings",
+    title: "Printer Warning or Error",
+    description:
+      "A printer warning usually means that something needs attention before printing can continue. The message may relate to paper, ink or toner, an open cover, a connection issue, or another printer condition.",
+    image:
+      "https://geeksonsite.com/wp-content/uploads/2026/08/printer-paper-jam-error.jpg",
+    steps: [
+      "Read the complete warning or error message shown on the printer display or computer.",
+      "Check whether the message refers to paper, ink, toner, a cover, or the printer connection.",
+      "Make sure all printer covers and access doors are properly closed.",
+      "Check the paper tray and cartridge or toner area if the warning points to supplies.",
+      "Restart the printer if the message appears temporary and the printer allows a restart.",
+      "If a specific error code remains, check the information for your printer model to understand what it means.",
+    ],
+  },
 ];
 
 const Guides = () => {
