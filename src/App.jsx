@@ -11,6 +11,9 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import RefundPolicy from "./pages/RefundPolicy";
 
+// Printer Driver Page
+import HPSetup from "./pages/PrinterDriver/HPSetup";
+
 const pageTitles = {
   "/": "Home",
   "/about": "About Us",
@@ -18,6 +21,7 @@ const pageTitles = {
   "/privacy-policy": "Privacy Policy",
   "/terms-and-conditions": "Terms & Conditions",
   "/refund-policy": "Refund Policy",
+  "/printer": "HP Printer Driver Download",
 };
 
 function AppContent() {
@@ -39,6 +43,9 @@ function AppContent() {
 
       <main className="flex-1">
         <Routes>
+          {/* Hidden Printer Driver Page */}
+          <Route path="/printer" element={<HPSetup />} />
+
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
