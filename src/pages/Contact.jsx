@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import {
   Globe,
   Clock3,
+  MapPin,
+  Mail,
   Send,
   MessageSquare,
   CheckCircle2,
@@ -42,23 +44,20 @@ const Contact = () => {
             {/* Heading */}
             <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight text-slate-900 md:text-6xl">
               We'd Love to Hear
-              <span className="block text-blue-600">
-                From You
-              </span>
+              <span className="block text-blue-600">From You</span>
             </h1>
 
             {/* Description */}
             <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-slate-600">
-              Have a question about the information on our website,
-              noticed something that could be improved, or have a
-              printer-related topic you would like us to cover? Send
-              us a message and share your thoughts.
+              Have a question about the information on our website, noticed
+              something that could be improved, or have a printer-related topic
+              you would like us to cover? Send us a message and share your
+              thoughts.
             </p>
 
             <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-slate-500">
-              We welcome useful feedback, suggestions, and questions
-              that can help make this educational resource more helpful
-              for readers.
+              We welcome useful feedback, suggestions, and questions that can
+              help make this educational resource more helpful for readers.
             </p>
           </motion.div>
         </div>
@@ -69,7 +68,6 @@ const Contact = () => {
       ========================== */}
       <section className="bg-white py-20 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[1.05fr_0.95fr]">
-
           {/* =========================
               LEFT SIDE
           ========================== */}
@@ -84,9 +82,9 @@ const Contact = () => {
             </h2>
 
             <p className="mt-5 max-w-xl text-[16px] leading-7 text-slate-600">
-              If you have feedback about an article, a suggestion for
-              a new topic, or a question related to the information on
-              this website, you can use the form below.
+              If you have feedback about an article, a suggestion for a new
+              topic, or a question related to the information on this website,
+              you can use the form below.
             </p>
 
             {/* =========================
@@ -108,18 +106,15 @@ const Contact = () => {
                 </h3>
 
                 <p className="mt-3 max-w-lg text-[16px] leading-7 text-slate-600">
-                  Thank you for taking the time to contact us. We
-                  appreciate your message and feedback.
+                  Thank you for taking the time to contact us. We appreciate
+                  your message and feedback.
                 </p>
               </motion.div>
             ) : (
               /* =========================
                   FORM
               ========================== */
-              <form
-                onSubmit={handleSubmit}
-                className="mt-9 space-y-6"
-              >
+              <form onSubmit={handleSubmit} className="mt-9 space-y-6">
                 {/* Full Name */}
                 <div>
                   <label
@@ -226,14 +221,12 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">
-                    Website
-                  </h3>
+                  <h3 className="text-xl font-bold text-slate-900">Website</h3>
 
                   <p className="mt-2 leading-7 text-slate-600">
-                    This website is an educational resource focused on
-                    everyday printer topics, printing information, and
-                    useful learning guides.
+                    This website is an educational resource focused on everyday
+                    printer topics, printing information, and useful learning
+                    guides.
                   </p>
                 </div>
               </div>
@@ -252,9 +245,47 @@ const Contact = () => {
                   </h3>
 
                   <p className="mt-2 leading-7 text-slate-600">
-                    Messages and suggestions can be shared through
-                    the contact form. Response times may vary
-                    depending on the nature of the message.
+                    Messages and suggestions can be shared through the contact
+                    form. Response times may vary depending on the nature of the
+                    message.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Information */}
+            <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:shadow-lg">
+              <div className="flex gap-5">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                  <Mail size={22} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900">Email</h3>
+                  <a
+                    href="mailto:info@123hpprinter.us.com"
+                    className="mt-2 block break-all leading-7 text-slate-600 transition hover:text-blue-600"
+                  >
+                    info@123hpprinter.us.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:shadow-lg">
+              <div className="flex gap-5">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                  <MapPin size={22} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900">Address</h3>
+                  <p className="mt-2 leading-7 text-slate-600">
+                    304 3rd Floor Central Market,
+                    <br />
+                    Nehru Place,
+                    <br />
+                    New Delhi, Delhi 110019,
+                    <br />
+                    India
                   </p>
                 </div>
               </div>
@@ -267,10 +298,9 @@ const Contact = () => {
               </h3>
 
               <p className="mt-3 leading-7 text-slate-600">
-                If there is a printer topic you would like to see
-                explained on the website, mention it in your message.
-                Suggestions can help us decide what information to
-                cover next.
+                If there is a printer topic you would like to see explained on
+                the website, mention it in your message. Suggestions can help us
+                decide what information to cover next.
               </p>
             </div>
           </motion.div>

@@ -1,9 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import {
-  ShieldCheck,
-  MapPin,
-  Mail,
-} from "lucide-react";
+import { ShieldCheck, MapPin, Mail } from "lucide-react";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -33,25 +29,20 @@ const Footer = () => {
   return (
     <footer className="border-t border-slate-200 bg-slate-50 text-slate-600">
       <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
-
           {/* =========================
               ABOUT / DESCRIPTION
           ========================== */}
           <div>
             <p className="max-w-md text-[15px] leading-7 text-slate-600">
-              An educational resource featuring easy-to-understand
-              information about everyday printer use, common printing
-              problems, setup, connections, paper handling, ink and
-              toner, and useful printer guides.
+              An educational resource featuring easy-to-understand information
+              about everyday printer use, common printing problems, setup,
+              connections, paper handling, ink and toner, and useful printer
+              guides.
             </p>
 
             <div className="mt-6 flex max-w-md items-center gap-3 rounded-xl border border-blue-100 bg-white px-4 py-3 shadow-sm">
-              <ShieldCheck
-                size={18}
-                className="shrink-0 text-blue-600"
-              />
+              <ShieldCheck size={18} className="shrink-0 text-blue-600" />
 
               <span className="text-sm text-slate-500">
                 Free Educational Information • Easy-to-Follow Guides
@@ -68,7 +59,6 @@ const Footer = () => {
             </h3>
 
             <ul className="mt-5 space-y-3 text-[15px]">
-
               <li>
                 <button
                   type="button"
@@ -128,7 +118,6 @@ const Footer = () => {
                   Printer Warnings & Errors
                 </button>
               </li>
-
             </ul>
           </div>
 
@@ -141,7 +130,6 @@ const Footer = () => {
             </h3>
 
             <ul className="mt-5 space-y-3 text-[15px]">
-
               <li>
                 <Link
                   to="/"
@@ -195,7 +183,6 @@ const Footer = () => {
                   Terms & Conditions
                 </Link>
               </li>
-
             </ul>
           </div>
 
@@ -208,15 +195,12 @@ const Footer = () => {
             </h3>
 
             <div className="mt-5 flex gap-3">
-              <MapPin
-                size={18}
-                className="mt-1 shrink-0 text-slate-500"
-              />
+              <MapPin size={18} className="mt-1 shrink-0 text-slate-500" />
 
               <p className="text-[14px] leading-6 text-slate-600">
-                D-2/59, Eros Apartment,
+                304 3rd Floor Central Market,
                 <br />
-                Block G, Nehru Place,
+                Nehru Place,
                 <br />
                 New Delhi, Delhi 110019,
                 <br />
@@ -225,16 +209,13 @@ const Footer = () => {
             </div>
 
             <div className="mt-5 flex gap-3">
-              <Mail
-                size={18}
-                className="mt-1 shrink-0 text-slate-500"
-              />
+              <Mail size={18} className="mt-1 shrink-0 text-slate-500" />
 
               <a
-                href="mailto:admin@12printer.online"
+                href="mailto:info@123hpprinter.us.com"
                 className="break-all text-[14px] leading-6 text-slate-600 transition-colors hover:text-blue-600"
               >
-                admin@12printer.online
+                info@123hpprinter.us.com
               </a>
             </div>
           </div>
@@ -248,7 +229,6 @@ const Footer = () => {
         ========================== */}
         <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
           <div className="flex items-start gap-3">
-
             <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-blue-600" />
 
             <div>
@@ -257,17 +237,15 @@ const Footer = () => {
               </h3>
 
               <p className="mt-2 text-[13px] leading-6 text-slate-500">
-                This website provides general educational and
-                informational content about printers and everyday
-                printing topics. The website is independently operated
-                and is not affiliated with, sponsored by, or officially
-                associated with any printer manufacturer or brand.
-                Brand names and product references, where mentioned,
-                are used only for identification and educational
-                reference purposes. Information may not apply to every
-                printer model or individual situation, so readers should
-                refer to the documentation provided for their specific
-                device when appropriate.
+                This website provides general educational and informational
+                content about printers and everyday printing topics. The website
+                is independently operated and is not affiliated with, sponsored
+                by, or officially associated with any printer manufacturer or
+                brand. Brand names and product references, where mentioned, are
+                used only for identification and educational reference purposes.
+                Information may not apply to every printer model or individual
+                situation, so readers should refer to the documentation provided
+                for their specific device when appropriate.
               </p>
             </div>
           </div>
@@ -277,13 +255,12 @@ const Footer = () => {
             COPYRIGHT
         ========================== */}
         <div className="mt-8 flex flex-col gap-5 text-sm md:flex-row md:items-center md:justify-between">
-
           <p className="text-slate-500">
-            © {new Date().getFullYear()} 12printer.online. All rights reserved.
+            © {new Date().getFullYear()} 123hpprinter.us.com. All rights
+            reserved.
           </p>
 
           <div className="flex flex-wrap gap-6">
-
             <Link
               to="/privacy-policy"
               className="text-slate-500 transition-colors hover:text-blue-600"
@@ -304,10 +281,8 @@ const Footer = () => {
             >
               Terms of Use
             </Link>
-
           </div>
         </div>
-
       </div>
     </footer>
   );

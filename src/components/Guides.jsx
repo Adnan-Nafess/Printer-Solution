@@ -12,6 +12,9 @@ import {
   X,
 } from "lucide-react";
 
+import inkImage from "../assets/ink.png";
+import printerImage from "../assets/printer.png";
+
 const guides = [
   {
     icon: Printer,
@@ -74,8 +77,7 @@ const guides = [
     title: "Ink or Toner Problem",
     description:
       "Ink and toner problems can appear as faded printing, missing colours, blank areas, streaks or warning messages. A cartridge can also be reported as empty, missing or not recognized even when it has recently been installed.",
-    image:
-      "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=900&q=85",
+    image: inkImage,
     steps: [
       "Check the ink or toner level shown by the printer or its software.",
       "Make sure the cartridge is installed in the correct position and is seated properly.",
@@ -92,8 +94,7 @@ const guides = [
     title: "Setting Up a New Printer",
     description:
       "Setting up a printer involves more than connecting the power cable. You may need to install the supplied ink or toner, load paper, connect the printer to your computer or network and confirm that the device is ready to print.",
-    image:
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=85",
+    image: printerImage,
     steps: [
       "Place the printer on a stable, suitable surface with enough room for paper and access to the printer.",
       "Connect the printer to power and complete the initial startup instructions.",
