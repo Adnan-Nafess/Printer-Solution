@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import printerSetupImage from "../pages/PrinterDriver/img.png";
 
 export default function SetupWizard({
   showWizard,
@@ -236,7 +237,7 @@ export default function SetupWizard({
               </p>
               <div className="flex justify-center max-w-xs mx-auto">
                 <img
-                  src="/img.png"
+                  src={printerSetupImage}
                   alt="Printer Setup"
                   className="h-32 w-auto object-contain"
                 />
