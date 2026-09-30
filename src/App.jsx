@@ -26,6 +26,7 @@ const pageTitles = {
 
 function AppContent() {
   const location = useLocation();
+  const isPrinterPage = location.pathname === "/printer";
 
   useEffect(() => {
     document.title = pageTitles[location.pathname] || "Home";
@@ -39,7 +40,7 @@ function AppContent() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+      {!isPrinterPage && <Navbar />}
 
       <main className="flex-1">
         <Routes>
@@ -55,7 +56,7 @@ function AppContent() {
         </Routes>
       </main>
 
-      <Footer />
+      {!isPrinterPage && <Footer />}
     </div>
   );
 }
