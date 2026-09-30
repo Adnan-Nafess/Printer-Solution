@@ -6,12 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "start": "node server.js"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
     "@tailwindcss/vite": "^4.3.3",
+    "express": "^5.2.1",
     "framer-motion": "^13.2.0",
     "lucide-react": "^1.45.0",
     "react": "^19.2.8",
